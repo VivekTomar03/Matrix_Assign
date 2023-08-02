@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { ChakraProvider, Container, Input, Button, VStack, IconButton, useMediaQuery , Flex} from '@chakra-ui/react';
 import { HamburgerIcon } from '@chakra-ui/icons';
 import axios from "axios"
-
+// import  "./App.css"
 
 import MobileSidebar from './Components/MobileSidebar';
 import Sidebar from './Components/Sidebar';
@@ -27,24 +27,24 @@ const App = () => {
   },[])
 
   return (
-      <Flex   flexDirectionn={["column","row"]}>
-        <VStack  alignItems="flex-start">
-          {isMobile ? (
-            <IconButton
-              icon={<HamburgerIcon />}
-              onClick={toggleMobileSidebar}
-              alignSelf="flex-end"
-              variant="ghost"
-            />
-          ) : (
-            <Sidebar active ={active}  setactive={setactive}/>
-          )}
-        </VStack>
-        {isMobile && (
-          <MobileSidebar isOpen={isMobileSidebarOpen} onClose={toggleMobileSidebar} />
-        )}
-        <RightContent data={data}/>
-      </Flex>
+    <Flex  flexDirectionn={[ "column","row"]}>
+    <VStack  alignItems="flex-start">
+      {isMobile ? (
+        <IconButton
+          icon={<HamburgerIcon />}
+          onClick={toggleMobileSidebar}
+          alignSelf="flex-end"
+          variant="ghost"
+        />
+      ) : (
+        <Sidebar active={active} setactive={ setactive }/>
+      )}
+    </VStack>
+    {isMobile && (
+      <MobileSidebar isOpen={isMobileSidebarOpen} onClose={toggleMobileSidebar} active={active} setactive={ setactive } />
+    )}
+    <RightContent data={data}/>
+  </Flex>
   );
 };
 

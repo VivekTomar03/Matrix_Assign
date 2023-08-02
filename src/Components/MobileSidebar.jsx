@@ -14,19 +14,21 @@ import {
 } from "@chakra-ui/react";
 import "./Sidebar.css";
 
-const MobileSidebar = ({ isOpen, onClose }) => {
+const MobileSidebar = ({ isOpen, onClose, active, setactive }) => {
   return (
     <Drawer isOpen={isOpen} placement="left" onClose={onClose}>
       <DrawerOverlay>
-        <DrawerContent bg="#292929"
-      width="288px"
-      height="982px"
-      top="1px"
-      border-radius="0px 32px 32px 0px" >
+        <DrawerContent
+          bg="#292929"
+          width="288px"
+          height="982px"
+          top="1px"
+          border-radius="0px 32px 32px 0px"
+        >
           <DrawerCloseButton />
-          <DrawerHeader> 
-           <Tabs isFitted variant="enclosed" >
-           <Tab>
+          <DrawerHeader>
+            <Tabs isFitted variant="enclosed">
+              <Tab>
                 <Flex justifyContent="center" alignItems="center">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -43,11 +45,14 @@ const MobileSidebar = ({ isOpen, onClose }) => {
                   <Text className="heading">NFTIfy</Text>
                 </Flex>
               </Tab>
-           </Tabs>
+            </Tabs>
           </DrawerHeader>
-          <DrawerBody    >
+          <DrawerBody>
             <Tabs isFitted variant="enclosed">
-              <Tab>
+              <Tab
+                bg={active ? "#F30050" : "#292929"}
+                onClick={() => setactive(!active)}
+              >
                 <Flex justifyContent="center" alignItems="center">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -64,7 +69,10 @@ const MobileSidebar = ({ isOpen, onClose }) => {
                   <Text className="address">Token Address</Text>
                 </Flex>
               </Tab>
-              <Tab>
+              <Tab
+                bg={!active ? "#F30050" : "#292929"}
+                onClick={() => setactive(!active)}
+              >
                 <Flex justifyContent="center" alignItems="center">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

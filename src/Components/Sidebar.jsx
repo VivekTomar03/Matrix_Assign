@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Box, Tabs, Tab, VStack, Flex, Text, Image } from "@chakra-ui/react";
 import "./Sidebar.css";
-const Sidebar = ({active,  setactive}) => {
-
+const Sidebar = ({active, setactive}) => {
+   
 
   return (
     <Box
@@ -10,7 +10,7 @@ const Sidebar = ({active,  setactive}) => {
       left={0}
       h="100vh"
       bg="#292929"
-      width="288px"
+      width="278px"
       height="982px"
       top="1px"
       border-radius="0px 32px 32px 0px"
@@ -35,7 +35,7 @@ const Sidebar = ({active,  setactive}) => {
           </Flex>
         </Tab>
         <Tab bg={active  ?  "#F30050" : "#292929"} 
-         onClick={() => setactive(true)} width="100%" >
+         onClick={() => setactive(!active)} width="100%" >
           <Flex   gap={"20px"} marginLeft= "32px"   >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -53,7 +53,7 @@ const Sidebar = ({active,  setactive}) => {
           </Flex>
         </Tab>
         <Tab bg={ !active  ?  "#F30050" : "#292929"} 
-       onClick={() => setactive(false)} width="100%" >
+       onClick={() => setactive(!active)} width="100%" >
           <Flex    gap={"20px"} marginLeft= "10px">
             <svg
               xmlns="http://www.w3.org/2000/svg"
