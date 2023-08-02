@@ -7,8 +7,6 @@
     background-image: url("../asset/Image20230802184608.png");
     height: auto;
     min-height: 100vh;
-    /* background-repeat: no-repeat; */
-    /* overflow-y: auto; */
 }
 
 .SingleCard {
@@ -22,6 +20,7 @@
     font-style: normal;
     font-weight: 600;
     line-height: normal;
+
 
 }
 
@@ -41,4 +40,20 @@
     font-style: normal;
     font-weight: 600;
     line-height: normal;
+}
+
+.searchbar {
+    border-radius: 20px;
+    border: 1px solid #FFF;
+    background: linear-gradient(132deg, rgba(124, 15, 53, 0.20) 0%, rgba(88, 18, 102, 0.20) 100%);
+}
+.connect{
+    border-radius: 20px;
+background: linear-gradient(131deg, #7C0F35 0%, #581266 100%);
+background-color:#7C0F35, #581266;
+width: 156px;
+height: 52px;
+flex-shrink: 0;
+color: #FFF;
+
 }

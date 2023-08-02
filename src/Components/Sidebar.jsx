@@ -10,11 +10,12 @@ const Sidebar = ({active, setactive}) => {
       left={0}
       h="100vh"
       bg="#292929"
-      width="278px"
+      width="288px"
       height="982px"
       top="1px"
       border-radius="0px 32px 32px 0px"
       boxShadow="lg"
+      zIndex={99}
     >
       <Tabs isFitted variant="enclosed"  >
         <Tab >
@@ -72,7 +73,7 @@ const Sidebar = ({active, setactive}) => {
         </Tab>
       </Tabs>
 
-      <Flex flexDirection="row"  marginTop={440}  gap={"20px"} marginLeft="34px">
+      <Flex flexDirection="row"  marginTop={405}  gap={"20px"} marginLeft="34px">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"
@@ -130,7 +131,11 @@ const Sidebar = ({active, setactive}) => {
             </clipPath>
           </defs>
         </svg>
+
+        
       </Flex>
+
+   
     </Box>
   );
 };
