@@ -89,19 +89,19 @@ const RightContent = ({ data, active, setinputText }) => {
                       <Text mb={"8px"} className="textleft" ml={"32px"}>
                         Symbol
                       </Text>
-                      <Text ml={"108px"}>{el?.baseToken?.symbol}</Text>
+                      <Text ml={"92px"}>{el?.baseToken?.symbol}</Text>
                     </Flex>
                     <Flex flexDirection={["row", "row"]}>
                       <Text mb={"8px"} className="textleft" ml={"32px"}>
                         Dex ID
                       </Text>
-                      <Text ml={"116px"}>#{el?.dexId.substring(0, 4)}</Text>
+                      <Text ml={"98px"}>#{el?.dexId.substring(0, 4)}</Text>
                     </Flex>
                     <Flex flexDirection={["row", "row"]}>
                       <Text mb={"8px"} className="textleft" ml={"32px"}>
                         Pair Address
                       </Text>
-                      <Text ml={"71px"}>
+                      <Text ml={"68px"}>
                         #{el?.pairAddress.substring(0, 4)}
                       </Text>
                     </Flex>
@@ -232,19 +232,19 @@ const RightContent = ({ data, active, setinputText }) => {
                       <Text mb={"8px"} className="textleft" ml={"32px"}>
                         Symbol
                       </Text>
-                      <Text ml={"108px"}>{el?.baseToken?.symbol}</Text>
+                      <Text ml={"92px"}>{el?.baseToken?.symbol}</Text>
                     </Flex>
                     <Flex flexDirection={["row", "row"]}>
                       <Text mb={"8px"} className="textleft" ml={"32px"}>
                         Dex ID
                       </Text>
-                      <Text ml={"116px"}>#{el?.dexId.substring(0, 4)}</Text>
+                      <Text ml={"97px"}>#{el?.dexId.substring(0, 4)}</Text>
                     </Flex>
                     <Flex flexDirection={["row", "row"]}>
                       <Text mb={"8px"} className="textleft" ml={"32px"}>
                         Pair Address
                       </Text>
-                      <Text ml={"71px"}>
+                      <Text ml={"68px"}>
                         #{el?.pairAddress.substring(0, 4)}
                       </Text>
                     </Flex>
