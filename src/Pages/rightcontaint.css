@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Poltawski+Nowy:wght@700&family=Ubuntu&display=swap");
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poltawski+Nowy:wght@700&family=Ubuntu&family=Work+Sans:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+.main-container {
+    background-image: url("../asset/Image20230802184608.png");
+    height: auto;
+   min-height: 100vh;
+}
+
+.SingleCard {
+    height: 188px;
+    width: 300px;
+    border-radius: "10px";
+    background-color: #390554;
+    color: #f5f5f5;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    
+}
+
+.textleft {
+    color: #F5F5F5;
+    font-family: Poppins;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.headtext {
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
