@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Box,
   Input,
@@ -11,7 +11,27 @@ import {
   InputRightElement,
 } from "@chakra-ui/react";
 import "./rightcontaint.css";
+import { useWeb3Modal } from "@web3modal/react";
 const RightContent = ({ data, active, setinputText }) => {
+  const { provider, loadWeb3Modal, logoutOfWeb3Modal } = useWeb3Modal();
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const connectWallet = async () => {
+    try {
+      await loadWeb3Modal();
+      setIsModalOpen(false); 
+    } catch (error) {
+      console.error("Error connecting wallet:", error);
+    }
+  };
+
+  const disconnectWallet = async () => {
+    try {
+      await logoutOfWeb3Modal();
+      // Wallet disconnected, perform any necessary cleanup.
+    } catch (error) {
+      console.error("Error disconnecting wallet:", error);
+    }
+  };
   console.log(data);
   return (
     <Box
@@ -26,12 +46,12 @@ const RightContent = ({ data, active, setinputText }) => {
         justifyContent="space-between"
         alignItems="center"
       >
-        <InputGroup width={["200px", "450px"]} height={"50px"}>
+        <InputGroup className="searchbar" width={["200px", "450px"]} >
           <Input
             className="searchbar"
             // width={"400px"}
             // height={"50px"}
-
+               border={"none"}
             placeholder={`Search`}
             mb={{ base: 4, md: 0 }}
             color={"white"}
@@ -52,7 +72,7 @@ const RightContent = ({ data, active, setinputText }) => {
             </svg>
           </InputRightElement>
         </InputGroup>
-        <button className="connect">Connect</button>
+        <button onClick={() => setIsModalOpen(true)} className="connect">Connect</button>
       </Box>
       <Text ml={4} color={"white"} fontSize="lg" fontWeight="bold" my={4}>
         {active ? "Token Search Result" : "Pair Search Result"}
@@ -573,6 +593,23 @@ const RightContent = ({ data, active, setinputText }) => {
               );
             })}
         </Grid>
+      )}
+
+
+{isModalOpen && (
+        <div className="modal">
+        
+           <img style={{marginTop:"55px"}} width={"300px"} height={"200px"} src="https://i.pinimg.com/750x/4d/f0/4e/4df04e729a0217243aa17c498c31b131.jpg"/>
+          <button style={{backgroundColor:"white"}} onClick={connectWallet}>Connect</button>
+          <button style={{backgroundColor:"white"}} onClick={() => setIsModalOpen(false)}>Cancel</button>
+        </div>
+      )}
+
+      {provider && (
+        <div>
+          {/* Render your app content here when the wallet is connected */}
+          <button onClick={disconnectWallet}>Disconnect Wallet</button>
+        </div>
       )}
     </Box>
   );

@@ -44,8 +44,11 @@
 
 .searchbar {
     border-radius: 20px;
-    border: 1px solid #FFF;
-    background: linear-gradient(132deg, rgba(124, 15, 53, 0.20) 0%, rgba(88, 18, 102, 0.20) 100%);
+border: 1px solid #FFF;
+background: linear-gradient(132deg, rgba(124, 15, 53, 0.20) 0%, rgba(88, 18, 102, 0.20) 100%);
+/* width: 435px;
+height: 50px;
+flex-shrink: 0; */
 }
 .connect{
     border-radius: 20px;
@@ -57,3 +60,42 @@ flex-shrink: 0;
 color: #FFF;
 
 }
+
+
+
+
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 30%;
+    height: 80%;
+    padding: 10px;
+    /* margin: auto; */
+    margin-top: 50px;
+    margin-left: 60%;
+    background-color:#141413;
+    z-index: 9999; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Modal content styles */
+  .modal h2 {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+  
+  .modal p {
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+  
+  .modal button {
+    padding: 12px 24px;
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
